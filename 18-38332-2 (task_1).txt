@@ -1,0 +1,24 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main(){
+    char array[30];
+    cin>>array;
+    int count=0;
+    for(int i=0;array[i]!='\0';i++){
+        if(array[i]=='('){
+            ++count;
+        }
+        else if(array[i]==')'){
+            --count;
+        }
+    }
+    if(count==0){
+        cout<<"Correct Experssion and the experssion is properly parenthesised";
+    }
+    else{
+        cout<<"Incorrect Experssion";
+    }
+    return 0;
+}
